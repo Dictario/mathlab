@@ -1,5 +1,5 @@
 /* MathLab service worker: cache-first so the app works fully offline after the first visit. */
-const CACHE = 'mathlab-v1';
+const CACHE = 'mathlab-v2';
 const FILES = ['./mathlab.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
